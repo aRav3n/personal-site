@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 export default function HeaderComponent() {
   return (
     <header>
-      <div>
-        <img src="/avatar_small.jpg" alt="profile photo"/>
+      <Link to="/">
+        <img src="/avatar_small.jpg" alt="profile photo" />
         <span>Andy Ryan</span>
-      </div>
+      </Link>
       <div className="header-links">
-        <Link to="/about" >About</Link>
+        <Link to="/about">About</Link>
         <Link to="/projects">Projects</Link>
         <Link to="/contact">Contact</Link>
       </div>

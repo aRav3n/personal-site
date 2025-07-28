@@ -75,7 +75,8 @@ header * {
   justify-content: center;
   justify-items: center;
 }
-header div {
+header > div
+header > a {
   flex-wrap: wrap;
 }
 header div.header-links {
