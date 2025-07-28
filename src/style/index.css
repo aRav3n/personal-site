@@ -23,11 +23,21 @@ a:hover {
 }
 
 body {
+  display: grid;
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+body > #root {
+  align-content: space-between;
+  display: grid;
+  margin: 0 auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 0;
+  text-align: center;
+  width: 100vw;
 }
 
 button {
@@ -49,16 +59,37 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+header {
+  align-items: start;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin: 0;
+  padding: 1rem;
+  position: relative;
+}
+header * {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+  justify-items: center;
+}
+header div {
+  flex-wrap: wrap;
+}
+header div.header-links {
+  position: sticky;
+}
+header img {
+  border-radius: 50%;
+  height: min(7rem, 20vw);
+  width: auto;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-}
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
 @keyframes logo-spin {
@@ -87,4 +118,10 @@ h1 {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+}
+
+@media (min-width: 500px) {
+  header * {
+  display: flex;
+}
 }

@@ -88,6 +88,7 @@ Here's a brief description of how to use the app.
 
 - [Devicion](https://devicon.dev/)
 - [Skillicons](https://skillicons.dev/)
+- [Ionicons](https://ionic.io/ionicons)
 
 
 ## Project Structure
