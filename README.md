@@ -20,7 +20,7 @@ This is my personal website that I crafted for displaying my portfolio. All my w
 3. Run the following in your terminal [^2]
     - ``` bash
       npm init -y
-      npm install react react-dom
+      npm install react react-dom react-router-dom
       npm install @eslint/js @types/react --save-dev
       npm install @types/react-dom @vitejs/plugin-react
       npm install eslint eslint-config-prettier --save-dev
@@ -72,6 +72,7 @@ Here's a brief description of how to use the app.
 
 - [react](https://www.npmjs.com/package/react)
 - [react-dom](https://www.npmjs.com/package/react-dom)
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 - [@eslint/js](https://www.npmjs.com/package/@eslint/js)
 - [@types/react](https://www.npmjs.com/package/@types/@types/react)
 - [@types/react-dom](https://www.npmjs.com/package/@types/react-dom)
@@ -94,6 +95,8 @@ Here's a brief description of how to use the app.
 ```bash
 ├──public/                 # Locally hosted images and icons
 ├──src/                    # Source files
+    ├──pages/              # Full page React components
+    ├──partials/           # Smaller React components
 └──test/                   # Test files
 ```
 
