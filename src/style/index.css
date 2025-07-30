@@ -3,6 +3,8 @@
   line-height: 1.5;
   font-weight: 400;
 
+  --light-background: #dee8d1;
+
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -30,12 +32,14 @@ body {
   min-height: 100vh;
 }
 body > #root {
-  align-content: space-between;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0 auto;
   min-height: 100vh;
   min-height: 100dvh;
   padding: 0;
+  position: relative;
   text-align: center;
   width: 100vw;
 }
@@ -61,12 +65,13 @@ button:focus-visible {
 
 header {
   align-items: start;
+  background-color: var(--light-background);
   display: flex;
   gap: 1rem;
   justify-content: space-between;
   margin: 0;
   padding: 1rem;
-  position: relative;
+  position: sticky;
 }
 header * {
   align-items: center;
@@ -75,22 +80,50 @@ header * {
   justify-content: center;
   justify-items: center;
 }
-header > div
-header > a {
+header > div header > a {
   flex-wrap: wrap;
-}
-header div.header-links {
-  position: sticky;
 }
 header img {
   border-radius: 50%;
   height: min(7rem, 20vw);
   width: auto;
 }
+header > span {
+  bottom: 0;
+  display: none;
+  font-weight: bold;
+  max-width: 55vw;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+}
+header > div.header-links {
+  align-items: start;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  padding: 1rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+header > div.header-links > div:last-child {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.header-extension {
+  background-color: var(--light-background);
+  padding: 0.5rem;
+}
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+main {
+  display: grid;
+  flex-grow: 1;
 }
 
 @keyframes logo-spin {
@@ -123,6 +156,9 @@ h1 {
 
 @media (min-width: 500px) {
   header * {
-  display: flex;
-}
+    display: flex;
+  }
+  header > span {
+    display: block;
+  }
 }
