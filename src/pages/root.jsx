@@ -11,6 +11,7 @@ export default function RootElement() {
 
   useEffect(() => {
     const { pinnedProjectsArray, otherProjectsArray } = getProjects();
+    console.log(otherProjectsArray);
 
     setPinnedProjects(pinnedProjectsArray);
     setOtherProjects(otherProjectsArray);

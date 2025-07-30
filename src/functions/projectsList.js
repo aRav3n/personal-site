@@ -1,8 +1,9 @@
 const pinFirstProjectsLength = 3;
 
 const otherProjectsArray = [];
-
 const pinnedProjectsArray = [];
+
+let stopAddingToArrays = false;
 
 function createProject(
   name,
@@ -11,10 +12,16 @@ function createProject(
   livePreviewUrl,
   repoIfPublicElseNull
 ) {
-  const arrayToPushInto =
-    pinnedProjectsArray.length < pinFirstProjectsLength
-      ? pinnedProjectsArray
-      : otherProjectsArray;
+  if (stopAddingToArrays) {
+    return;
+  }
+  if (
+    pinnedProjectsArray[0] &&
+    pinnedProjectsArray[0].description === description
+  ) {
+    stopAddingToArrays = true;
+    return;
+  }
 
   const projectObject = {
     name,
@@ -24,10 +31,14 @@ function createProject(
     repoIfPublicElseNull,
   };
 
-  arrayToPushInto.push(projectObject);
+  if (pinnedProjectsArray.length < pinFirstProjectsLength) {
+    pinnedProjectsArray.push(projectObject);
+  } else if (otherProjectsArray) {
+    otherProjectsArray.push(projectObject);
+  }
 }
 
-export default function getProjects(setPinnedProjects, setOtherProjects) {
+export default function getProjects() {
   createProject(
     "Spa Homepage",
     "https://github.com/aRav3n/punto-de-calma-homepage/raw/main/src/images/screenshot.png",
@@ -70,7 +81,7 @@ export default function getProjects(setPinnedProjects, setOtherProjects) {
 
   createProject(
     "Hidden Image Game",
-    "https://github.com/aRav3n/wheres-waldo-backend/blob/main/public/screenshot.png",
+    "https://github.com/aRav3n/wheres-waldo-backend/raw/main/public/screenshot.png",
     "This is a hidden image game (similar to Where's Waldo) built as part of The Odin Project curriculum. The frontend is built using React and Vite; it allows users to click anywhere on the game image and sends the coordinates to the API for checking. The backend is a RESTful API built with Node.js and Express.",
     "https://98256945.wheres-waldo-frontend-top.pages.dev/",
     "https://github.com/aRav3n/wheres-waldo-backend"

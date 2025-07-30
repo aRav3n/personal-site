@@ -21,7 +21,7 @@ This is my personal website that I crafted for displaying my portfolio. All my w
     - ``` bash
       npm init -y
       npm install react react-dom react-router-dom
-      npm install lucide-react
+      npm install lucide-react uuid
       npm install @eslint/js @types/react --save-dev
       npm install @types/react-dom @vitejs/plugin-react
       npm install eslint eslint-config-prettier --save-dev
@@ -85,6 +85,7 @@ Here's a brief description of how to use the app.
 - [eslint-plugin-react-refresh](https://www.npmjs.com/package/eslint-plugin-react-refresh)
 - [globals](https://www.npmjs.com/package/globals)
 - [vite](https://www.npmjs.com/package/vite)
+- [uuid](https://www.npmjs.com/package/uuid)
 
 ### Other Credits
 

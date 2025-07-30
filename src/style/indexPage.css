@@ -1,3 +1,7 @@
+div.header-extension {
+  justify-self: stretch;
+}
+
 main {
   align-content: space-between;
 }

@@ -3,11 +3,15 @@
   line-height: 1.5;
   font-weight: 400;
 
-  --light-background: #dee8d1;
+  --attention-color: #646cff;
+  --item-background: #d1dbc4;
+  --light-background: #f6fbef;
+  --medium-background: #dee8d1;
+  --text-color: #222521;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: inherit;
+  background-color: var(--medium-background);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,7 +21,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--attention-color);
   text-decoration: inherit;
 }
 a:hover {
@@ -25,6 +29,7 @@ a:hover {
 }
 
 body {
+  color: var(--text-color);
   display: grid;
   margin: 0;
   place-items: center;
@@ -32,6 +37,7 @@ body {
   min-height: 100vh;
 }
 body > #root {
+  background-color: var(--light-background);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -45,27 +51,45 @@ body > #root {
 }
 
 button {
+  background-color: var(--item-background);
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+button:hover,
+div.links a:focus,
+div.links a:focus-visible,
+div.links a:hover,
+div.projects > div:focus,
+div.projects > div:focus-visible {
+  border-color: var(--attention-color);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+div.links {
+  background-color: var(--medium-background);
+}
+div.links a {
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+}
+
+footer {
+  background-color: var(--medium-background);
+  margin-top: 1rem;
+}
+
 header {
   align-items: start;
-  background-color: var(--light-background);
+  background-color: var(--medium-background);
   display: flex;
   gap: 1rem;
   justify-content: space-between;
@@ -112,7 +136,7 @@ header > div.header-links > div:last-child {
 }
 
 .header-extension {
-  background-color: var(--light-background);
+  background-color: var(--medium-background);
   padding: 0.5rem;
 }
 
@@ -124,6 +148,8 @@ h1 {
 main {
   display: grid;
   flex-grow: 1;
+  justify-content: stretch;
+  justify-items: center;
 }
 
 @keyframes logo-spin {
@@ -135,16 +161,13 @@ main {
   }
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+    --attention-color: #646cff;
+    --item-background: #92978c;
+    --light-background: #f6fbef;
+    --medium-background: #dee8d1;
+    --text-color: #222521;
   }
 }
 
