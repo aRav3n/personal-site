@@ -49,7 +49,7 @@ export default function getProjects() {
 
   createProject(
     "Simple Shopping Website",
-    "https://github.com/aRav3n/shopping-cart/raw/main/src/assets/screenshot.png",
+    "https://github.com/aRav3n/shopping-cart/raw/main/public/screenshot.png",
     "This is a shopping website frontend built with Vite and React. It pulls data from a generic test API to populate the store.",
     "https://shopping-cart-8jt.pages.dev/shop/products",
     "https://github.com/aRav3n/shopping-cart"
@@ -73,7 +73,7 @@ export default function getProjects() {
 
   createProject(
     "Memory Card Game",
-    "https://github.com/aRav3n/memory-game/raw/main/src/assets/screenshot.png",
+    "https://github.com/aRav3n/memory-game/raw/main/public/screenshot.png",
     "This is a memory card game using the Scryfall API for the backend and Vite and React to build the frontend.",
     "https://memory-game-dga.pages.dev/",
     "https://github.com/aRav3n/memory-game"

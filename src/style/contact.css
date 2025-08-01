@@ -1,0 +1,56 @@
+.bottom-buttons {
+  display: grid;
+  gap: 0.5rem;
+  justify-content: center;
+  justify-items: center;
+}
+.bottom-buttons > button {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  justify-self: center;
+}
+
+div.contact {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+div.contact > div:first-child {
+  display: flex;
+  gap: 1rem;
+}
+div.contact > div:first-child > button {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+  justify-items: start;
+  padding: 1rem;
+}
+
+label {
+  display: grid;
+  justify-content: stretch;
+  justify-items: start;
+}
+
+form span {
+  font-size: 0.75rem;
+}
+
+textarea {
+  height: 10rem;
+  resize: none;
+  max-width: 800px;
+  width: max(35vw, 250px);
+}
+textarea#design-concept,
+textarea#inspiration {
+  height: 4rem;
+}

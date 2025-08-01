@@ -1,0 +1,46 @@
+div.passion {
+  display: grid;
+  margin: 1rem;
+}
+div.passion button {
+  justify-self: start;
+}
+div.passion > div {
+  display: grid;
+  gap: 1rem;
+  justify-self: center;
+}
+div.passion img {
+  height: auto;
+  max-width: 1000px;
+  width: 100%;
+}
+div.passion p {
+  gap: 0.5rem;
+  margin: 0;
+  text-align: left;
+}
+
+div.passion-list {
+  display: grid;
+  justify-content: stretch;
+  justify-items: start;
+  max-width: 800px;
+  width: max(60vw, 290px);
+}
+div.passion-list h1 {
+  justify-self: center;
+  margin: 0.25rem;
+}
+div.passion-list > p {
+  justify-self: center;
+  margin: 0;
+}
+
+h1 {
+  margin: 0.5rem;
+}
+
+main > h1 {
+  margin-top: 1rem;
+}

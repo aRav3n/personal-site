@@ -11,38 +11,44 @@
 
 ## Description
 
-This is my personal website that I crafted for displaying my portfolio. All my web development learning up to this point has been via [The Odin Project](https://www.theodinproject.com) and I am very grateful. This site will showcase my projects to show potential clients and employers what my capabilities are. 
+This is my personal website that I crafted for displaying my portfolio. All my web development learning up to this point has been via [The Odin Project](https://www.theodinproject.com) and I am very grateful. This site will showcase my projects to show potential clients and employers what my capabilities are.
 
 ## Installation Instructions
 
 1. Clone or fork this repo
 2. cd into the project root directory [^1]
 3. Run the following in your terminal [^2]
-    - ``` bash
-      npm init -y
-      npm install react react-dom react-router-dom
-      npm install lucide-react uuid
-      npm install @eslint/js @types/react --save-dev
-      npm install @types/react-dom @vitejs/plugin-react
-      npm install eslint eslint-config-prettier --save-dev
-      npm install eslint-plugin-react-hooks eslint-plugin-react-refresh --save-dev
-      npm install globals vite --save-dev
-      ```
-1. `npm run dev`
-   - `^` + `c` will end the process 
-1. Navigate to the url displayed in the terminal: `➜  Local:   http://localhost:5173/`
+   - ```bash
+     npm init -y
+     npm install react react-dom react-router-dom
+     npm install lucide-react uuid
+     npm install @eslint/js @types/react --save-dev
+     npm install @types/react-dom @vitejs/plugin-react
+     npm install eslint eslint-config-prettier --save-dev
+     npm install eslint-plugin-react-hooks eslint-plugin-react-refresh --save-dev
+     npm install globals vite --save-dev
+     ```
+4. `code .env` 
+   - ```bash
+     VITE_EMAIL_JS_SERVICE_ID=
+     VITE_EMAIL_JS_PUBLIC_KEY=
+     ```
+5. `npm run dev`
+   - `^` + `c` will end the process
+6. Navigate to the url displayed in the terminal: `➜  Local:   http://localhost:5173/`
 
 ## Usage and Screenshots
 
-<!-- 
-<img src="./public/screenshot.png" alt="screenshot" style="height: 50vh; width: auto;"> 
+<!--
+<img src="./public/screenshot.png" alt="screenshot" style="height: 50vh; width: auto;">
 
-Here's a brief description of how to use the app. 
+Here's a brief description of how to use the app.
 
-- [Link to live preview](https://groundedwanderer.dev/) 
+- [Link to live preview](https://groundedwanderer.dev/)
 -->
 
 ### Features
+
 - Display my portfolio
 - Sticks to my core design principles of: Simple, Functional, Beautiful
 
@@ -75,6 +81,7 @@ Here's a brief description of how to use the app.
 - [react](https://www.npmjs.com/package/react)
 - [react-dom](https://www.npmjs.com/package/react-dom)
 - [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+- [@emailjs/browser](https://www.npmjs.com/package/@emailjs/browser)
 - [@eslint/js](https://www.npmjs.com/package/@eslint/js)
 - [@types/react](https://www.npmjs.com/package/@types/@types/react)
 - [@types/react-dom](https://www.npmjs.com/package/@types/react-dom)
@@ -92,7 +99,6 @@ Here's a brief description of how to use the app.
 - [Devicion](https://devicon.dev/)
 - [Skillicons](https://skillicons.dev/)
 - [Ionicons](https://ionic.io/ionicons)
-
 
 ## Project Structure
 

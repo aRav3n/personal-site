@@ -1,5 +1,213 @@
 import { useState } from "react";
 
-export default function AboutPage(){
-  return <h1>About Me</h1>
+import "../style/about.css";
+
+function PassionDisplay({ name, formattedContents }) {
+  const [showContents, setShowContents] = useState(false);
+
+  return (
+    <div className="passion">
+      <button
+        type="button"
+        onClick={() => {
+          const newBool = !showContents;
+          setShowContents(newBool);
+        }}
+      >
+        {name}
+      </button>
+      {showContents ? formattedContents : null}
+    </div>
+  );
+}
+
+function PassionsList() {
+  const languageContents = (
+    <div>
+      <p>
+        I've been interested in learning languages ever since my first trip
+        abroad (see the travel section for more on that). Traveling in Latin
+        America provided an excellent opportunity to hone my conversational
+        Spanish. I also get to travel to Sri Lanka regularly to visit family on
+        my wife's side so I get to learn some Sinhala.
+      </p>
+      <p>
+        Two of my favorite language learning resources are{" "}
+        <a
+          href="https://www.dreamingspanish.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Dreaming Spanish
+        </a>{" "}
+        and{" "}
+        <a
+          href="https://www.lazybutsmartsinhala.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Lazy but Smart Sinhala
+        </a>
+        .
+      </p>
+    </div>
+  );
+
+  const natureContents = (
+    <div>
+      <p>
+        Spending time in nature has been a passion of mine for as long as I can
+        remember. When I was young, my parents used to take my siblings and I to
+        a nearby creek to catch tadpoles in the spring time and snowshoeing in
+        the winter (complete with a fire and hot ramen for lunch).
+      </p>
+      <p>
+        When I was a bit older I got to start participating in the{" "}
+        <a
+          href="https://redwingelc.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Red Wing Environmental Learning Center
+        </a>
+        . I would spend several years learning not only how to thrive outdoors
+        (what plants you can eat, where to set up your tent, how to build a fire
+        with a single match, etc.), but more importantly an inner confidence and
+        sense of self-reliance that, as a slightly nerdy kid, I was unable to
+        find elsewhere.
+        <img
+          src="./passion-photos/elc-alaska-expedition.jpg"
+          alt="group photo of our expedition to Prince William Sound"
+        />
+      </p>
+    </div>
+  );
+
+  const photographyContents = (
+    <div>
+      <p>
+        I became interested in photography during a two week trip to California
+        for work. I started out with a Sony a6000 and{" "}
+        <a
+          href="https://travelphotographycourse.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Laurence Norah's travel photography course
+        </a>
+        . Learning photography has been really beneficial because it helps me
+        see the beauty in everyday things, which has helped me enjoy my passion
+        of travel even more.
+        <img
+          src="/passion-photos/tortel-boat.jpg"
+          alt="boat in the fog in Tortel, Chile"
+        />
+        <img
+          src="/passion-photos/torres-sunset.jpg"
+          alt="sunset over Torres Del Paine national park"
+        />
+      </p>
+    </div>
+  );
+
+  const readingContents = (
+    <div>
+      <p>
+        There's not much better than going to bed early, sipping some tea, and
+        reading a good book. My recent favorite is{" "}
+        <a
+          href="https://timcopejourneys.com/book-shop/on-the-trail-of-genghis-khan-an-epic-journey-through-the-land-of-the-nomads/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          On the Trail of Genghis Khan
+        </a>{" "}
+        by Tim Cope. My all-time favorites include the Wheel of Time series, The
+        Alchemist, Atomic Habits, and the Harry Potter series.
+      </p>
+    </div>
+  );
+
+  const travelContents = (
+    <div>
+      <p>
+        My passion for traveling really took off during a two week family trip
+        to Sweden and Norway when I was in high school. This trip would kindle
+        my love for travel as well as my desire to go with single small bag to
+        enable use of public transit.
+        <img
+          src="/passion-photos/sweden-1.jpg"
+          alt="cool buildings in Stockholm Sweden"
+        />
+        <img
+          src="/passion-photos/sweden-2.jpg"
+          alt="some boats along Sweden's western coast"
+        />
+      </p>
+      <p>
+        More recently, my wife and I drove the Pan American Highway (Prudhoe
+        Bay, Alaska, USA to Ushuaia, Argentina). We spent some extended time in
+        Uruguay and Argentina afterwards which was quite nice. We planned and
+        saved for the trip for roughly five years before setting out an a nice
+        spring day in 2022 on our three year journey (that we thought would take
+        18 months).
+        <img
+          src="/passion-photos/tuk-ocean.jpg"
+          alt="our vehicle at the ocean in Tuktoyaktuk"
+        />
+        <img
+          src="/passion-photos/ushuaia-city-sign.jpg"
+          alt="the three of us in Ushuaia"
+        />
+      </p>
+    </div>
+  );
+
+  return (
+    <div className="passion-list">
+      <h1>My Passions</h1>
+      <p>(click on them to learn more)</p>
+      <PassionDisplay name={"Travel"} formattedContents={travelContents} />
+      <PassionDisplay
+        name={"Photography"}
+        formattedContents={photographyContents}
+      />
+      <PassionDisplay name={"Reading"} formattedContents={readingContents} />
+      <PassionDisplay
+        name={"Language Learning"}
+        formattedContents={languageContents}
+      />
+      <PassionDisplay name={"Nature"} formattedContents={natureContents} />
+    </div>
+  );
+}
+
+export default function AboutPage() {
+  return (
+    <>
+      <h1>About Me</h1>
+      <p>
+        Hi there, I'm Andy! In 2022 I left my ten year career as a manufacturing
+        engineer to drive the Pan American Highway alongside my amazing wife
+        (check out our{" "}
+        <a
+          href="https://www.instagram.com/4funnervibes/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>{" "}
+        to learn more). After only three months of our travels I started to get
+        antsy; my mind needed something to do and there was only so much
+        perfecting of our cost tracking spreadsheet I could do. I decided to
+        look for a passion that had the potential to turn into location
+        independent work after our trip. After a bit of searching, a friend of
+        mine suggested I take a look at both CS50 and The Odin Project (thanks
+        Ryan!) and here I am! If you'd like to get in touch with me to
+        collaborate on a project or three feel free to scroll to the bottom of
+        the page for my contact info.
+      </p>
+      <PassionsList />
+    </>
+  );
 }
