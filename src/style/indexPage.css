@@ -1,8 +1,13 @@
-div.header-extension {
-  justify-self: stretch;
-}
-
 main {
   align-content: space-between;
 }
-
+main > div.header-extension {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  width: 100vw;
+}
+main > div.header-extension > p {
+  margin: 0;
+  text-align: justify;
+}

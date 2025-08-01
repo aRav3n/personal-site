@@ -4,24 +4,11 @@ import { v4 as uuidv4 } from "uuid";
 import "../style/projects.css";
 
 function SingleProjectDisplay({ project }) {
-  const [linkClass, setLinkClass] = useState("hidden");
-  function handleClick() {
-    linkClass !== "hidden" ? setLinkClass("hidden") : setLinkClass("shown");
-  }
   return (
-    <div
-      tabIndex="0"
-      onClick={handleClick}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          handleClick();
-        }
-      }}
-    >
-      <img src={project.screenshotPath} alt={`${project.name} screenshot`} />
+    <div>
       <strong>{project.name}</strong>
       <p>{project.description}</p>
-      <div className={`links ${linkClass}`}>
+      <div className="links">
         <a
           href={project.livePreviewUrl}
           target="_blank"
@@ -39,6 +26,7 @@ function SingleProjectDisplay({ project }) {
           </a>
         ) : null}
       </div>
+      <img src={project.screenshotPath} alt={`${project.name} screenshot`} />
     </div>
   );
 }
@@ -46,9 +34,11 @@ function SingleProjectDisplay({ project }) {
 export default function ProjectsDisplay({ projects, className }) {
   return (
     <div className={`projects ${className}`}>
+      <span></span>
       {projects.map((project) => {
         return <SingleProjectDisplay project={project} key={uuidv4()} />;
       })}
+      <span></span>
     </div>
   );
 }

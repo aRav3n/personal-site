@@ -6,8 +6,11 @@
   --attention-color: #646cff;
   --item-background: #d1dbc4;
   --light-background: #f6fbef;
+  --light-background-semi-transparent: #f6fbefaa;
+  --light-outline: #5e665444;
   --medium-background: #dee8d1;
   --text-color: #222521;
+  --text-light: #222521aa;
 
   color-scheme: light dark;
   color: inherit;
@@ -31,10 +34,12 @@ a:hover {
 body {
   color: var(--text-color);
   display: grid;
+  height: fit-content;
   margin: 0;
+  padding: 0;
   place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  width: 100vw;
 }
 
 button {
@@ -51,9 +56,7 @@ button {
 button:hover,
 div.links a:focus,
 div.links a:focus-visible,
-div.links a:hover,
-div.projects > div:focus,
-div.projects > div:focus-visible {
+div.links a:hover {
   border-color: var(--attention-color);
 }
 button:focus,
@@ -61,12 +64,34 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-div.links {
-  background-color: var(--medium-background);
+div.contact > div > a {
+  border: 1px solid var(--light-outline);
 }
+div.contact > div > a:hover {
+  border-color: var(--attention-color);
+}
+
 div.links a {
-  border: 1px solid var(--text-color);
+  background-color: var(--medium-background);
+  border: 1px solid var(--light-outline);
   color: var(--text-color);
+}
+
+div.passion > button {
+  background-color: #00000000;
+  border: 2px solid var(--light-outline);
+}
+
+div.projects > div {
+  border: 2px solid var(--light-outline);
+}
+div.projects > div:focus,
+div.projects > div:focus-visible,
+div.projects > div:hover {
+  border-color: var(--attention-color);
+}
+div.projects > div > img {
+  border-radius: 0.5rem;
 }
 
 footer {
@@ -95,6 +120,9 @@ header * {
 header > div,
 header > a {
   flex-wrap: wrap;
+}
+header > a:first-child span {
+  font-size: 1.5rem;
 }
 header img {
   border-radius: 50%;
@@ -126,26 +154,39 @@ header > div.header-links > div:last-child {
 
 .header-extension {
   background-color: var(--medium-background);
-  padding: 0.5rem;
-  width: 100vw;
+  padding: 0.5rem 1rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+label > input,
+label > textarea {
+  border-color: var(--light-outline);
+}
+label span {
+  color: var(--text-light);
 }
 
 main {
   align-content: stretch;
   align-items: center;
   align-self: center;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   justify-content: start;
   justify-items: start;
   max-width: 1500px;
+  padding: 0;
+  width: 100%;
+}
+main > * {
+  box-sizing: border-box;
   padding: 0 2vw;
+}
+main > p {
+  margin: 0;
+  padding: 0 1rem;
+  text-align: justify;
 }
 
 #root {
@@ -159,7 +200,7 @@ main {
   padding: 0;
   position: relative;
   text-align: center;
-  width: 100vw;
+  width: 100%;
 }
 
 @keyframes logo-spin {
@@ -192,6 +233,6 @@ main {
     display: flex;
   }
   header > span {
-    display: block;
+    display: flex;
   }
 }

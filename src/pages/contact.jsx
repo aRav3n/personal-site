@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { Coins, Mail, MessageSquareX, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
@@ -123,7 +124,7 @@ function QuoteRequest({
         />
       </label>
       <label htmlFor="location">
-        Location <span>So I have an idea of your timezone</span>
+        Location
         <input
           type="text"
           name="location"
@@ -277,11 +278,19 @@ export default function ContactPage() {
   return (
     <main>
       <h1>Contact Me</h1>
-      <p>
+      <p className="contact-about">
         Hey there! If you think we'd be a good fit and would like to work
         together, or just have questions and comments, send me a message!
       </p>
       <div className="contact">
+        <div>
+          <Link to="https://github.com/aRav3n">
+            <ion-icon name="logo-github"></ion-icon> GitHub
+          </Link>
+          <Link to="https://www.linkedin.com/in/andrew-ryan-/">
+            <ion-icon name="logo-linkedin"></ion-icon> LinkedIn
+          </Link>
+        </div>
         <div>
           <button
             type="button"

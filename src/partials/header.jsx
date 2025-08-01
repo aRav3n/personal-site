@@ -10,7 +10,7 @@ export default function HeaderComponent() {
           <span>Andy Ryan</span>
         </Link>
         <span>
-          I build websites that are simple, functional, and beautiful.
+          Crafting websites that are | simple | functional | beautiful
         </span>
         <div className="header-links">
           <div>

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "../style/about.css";
 
-function PassionDisplay({ name, formattedContents }) {
+function PassionDisplay({ name, formattedContents, leadPhotoUrl }) {
   const [showContents, setShowContents] = useState(false);
 
   return (
@@ -14,6 +14,7 @@ function PassionDisplay({ name, formattedContents }) {
           setShowContents(newBool);
         }}
       >
+        <img src={leadPhotoUrl} alt={`lead photo for ${name}`} />
         {name}
       </button>
       {showContents ? formattedContents : null}
@@ -165,19 +166,37 @@ function PassionsList() {
 
   return (
     <div className="passion-list">
-      <h1>My Passions</h1>
-      <p>(click on them to learn more)</p>
-      <PassionDisplay name={"Travel"} formattedContents={travelContents} />
-      <PassionDisplay
-        name={"Photography"}
-        formattedContents={photographyContents}
-      />
-      <PassionDisplay name={"Reading"} formattedContents={readingContents} />
-      <PassionDisplay
-        name={"Language Learning"}
-        formattedContents={languageContents}
-      />
-      <PassionDisplay name={"Nature"} formattedContents={natureContents} />
+      <div>
+        <h1>My Passions</h1>
+        <p>(click to see more)</p>
+      </div>
+      <div>
+        <PassionDisplay
+          name={"Travel"}
+          formattedContents={travelContents}
+          leadPhotoUrl={"/passion-photos/travel-small.png"}
+        />
+        <PassionDisplay
+          name={"Photography"}
+          formattedContents={photographyContents}
+          leadPhotoUrl={"/passion-photos/photography-small.jpg"}
+        />
+        <PassionDisplay
+          name={"Reading"}
+          formattedContents={readingContents}
+          leadPhotoUrl={"/passion-photos/reading-small.jpeg"}
+        />
+        <PassionDisplay
+          name={"Language Learning"}
+          formattedContents={languageContents}
+          leadPhotoUrl={"/passion-photos/language-learning-small.jpg"}
+        />
+        <PassionDisplay
+          name={"Nature"}
+          formattedContents={natureContents}
+          leadPhotoUrl={"/passion-photos/nature-small.jpg"}
+        />
+      </div>
     </div>
   );
 }
@@ -188,7 +207,7 @@ export default function AboutPage() {
       <h1>About Me</h1>
       <p>
         Hi there, I'm Andy! In 2022 I left my ten year career as a manufacturing
-        engineer to drive the Pan American Highway alongside my amazing wife
+        engineer to drive the Pan American Highway with my wife
         (check out our{" "}
         <a
           href="https://www.instagram.com/4funnervibes/"

@@ -1,9 +1,20 @@
 div.passion {
   display: grid;
+  gap: 1rem;
+  justify-content: center;
+  justify-items: center;
   margin: 1rem;
 }
 div.passion button {
-  justify-self: start;
+  align-content: space-around;
+  display: grid;
+  font-weight: bold;
+  gap: 0.5rem;
+}
+div.passion button > img {
+  color: #00000088;
+  height: auto;
+  width: 250px;
 }
 div.passion > div {
   display: grid;
@@ -22,11 +33,17 @@ div.passion p {
 }
 
 div.passion-list {
+  align-items: start;
   display: grid;
-  justify-content: stretch;
-  justify-items: start;
-  max-width: 800px;
-  width: max(60vw, 290px);
+  justify-content: center;
+  justify-items: center;
+  max-width: 1200px;
+  width: max(80vw, 290px);
+}
+div.passion-list > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 div.passion-list h1 {
   justify-self: center;
@@ -44,3 +61,4 @@ h1 {
 main > h1 {
   margin-top: 1rem;
 }
+

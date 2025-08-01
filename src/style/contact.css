@@ -13,14 +13,23 @@
 
 div.contact {
   display: grid;
+  gap: 1rem;
   justify-content: center;
   justify-items: center;
 }
-div.contact > div:first-child {
+div.contact > div:first-child,
+div.contact > div:nth-child(2) {
   display: flex;
   gap: 1rem;
 }
-div.contact > div:first-child > button {
+div.contact > div > a {
+  align-items: center;
+  border-radius: 0.2rem;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.1rem 0.4rem;
+}
+div.contact > div:nth-child(2) > button {
   display: grid;
   justify-content: center;
   justify-items: center;
@@ -36,12 +45,28 @@ form {
 
 label {
   display: grid;
+  font-weight: 900;
+  gap: 0.05rem;
   justify-content: stretch;
   justify-items: start;
+}
+label > input,
+label > textarea {
+  border-width: 1.25px;
+  border-radius: 0.25rem;
+  border-style: solid;
+  padding: 0.25rem;
 }
 
 form span {
   font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0;
+}
+
+p.contact-about {
+  font-size: 1.25rem;
+  margin: 1rem 0;
 }
 
 textarea {
