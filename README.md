@@ -44,7 +44,7 @@ This is my personal website that I crafted for displaying my portfolio. All my w
 <!--
 <img src="./public/screenshot.png" alt="screenshot" style="height: 50vh; width: auto;">
 
-Here's a brief description of how to use the app.
+Using this site is pretty straightforward. Users are able to navigate to different pages by clicking on the links in the header and can send a message or quote request on the Contact page.
 
 - [Link to live preview](https://groundedwanderer.dev/)
 -->
