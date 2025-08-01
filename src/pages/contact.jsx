@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Coins, Mail, MessageSquareX, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
@@ -196,6 +196,10 @@ export default function ContactPage() {
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
 
+  const templateId = "contact_form";
+  const emailServiceId = import.meta.env.VITE_EMAIL_JS_SERVICE_ID;
+  const publicKey = import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY;
+
   function clearStates() {
     setCompany("");
     setEmail("");
@@ -208,17 +212,27 @@ export default function ContactPage() {
     setErrorMessage("");
   }
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  function sendEmail(title, name, message, email) {
+    const time = new Date();
+
+    const body = {
+      time,
+      title,
+      name,
+      message,
+      email,
+    };
 
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
-        publicKey: "YOUR_PUBLIC_KEY",
+      .send(emailServiceId, templateId, body, {
+        publicKey: publicKey,
       })
       .then((error) => {
-        setErrorMessage(error.text);
+        if (error.status !== 200) {
+          setErrorMessage(error.text);
+        }
       });
-  };
+  }
 
   function handleClick() {
     setErrorMessage("");
@@ -237,7 +251,7 @@ export default function ContactPage() {
       return;
     }
 
-    const subject =
+    const title =
       formToDisplay === "basic"
         ? `General - ${name}`
         : `Quote Request - ${name} - ${company}`;
@@ -254,6 +268,8 @@ export default function ContactPage() {
     
     ${message}
     `;
+
+    sendEmail(title, name, messageToSend, email);
 
     clearStates();
   }

@@ -28,14 +28,16 @@ This is my personal website that I crafted for displaying my portfolio. All my w
      npm install eslint-plugin-react-hooks eslint-plugin-react-refresh --save-dev
      npm install globals vite --save-dev
      ```
-4. `code .env` 
+4. Log in to your [EmailJS dashboard](https://dashboard.emailjs.com) or sign up for the service.
+   - Follow their [tutorial](https://www.emailjs.com/docs/tutorial/overview/) if needed
+5. Back in your IDE: `code .env`
    - ```bash
-     VITE_EMAIL_JS_SERVICE_ID=
-     VITE_EMAIL_JS_PUBLIC_KEY=
+     VITE_EMAIL_JS_SERVICE_ID="your email service ID"
+     VITE_EMAIL_JS_PUBLIC_KEY="your public key"
      ```
-5. `npm run dev`
+6. `npm run dev`
    - `^` + `c` will end the process
-6. Navigate to the url displayed in the terminal: `➜  Local:   http://localhost:5173/`
+7. Navigate to the url displayed in the terminal: `➜  Local:   http://localhost:5173/`
 
 ## Usage and Screenshots
 
@@ -103,11 +105,22 @@ Here's a brief description of how to use the app.
 ## Project Structure
 
 ```bash
+├──node_modules/           # NPM package files - populated locally only
 ├──public/                 # Locally hosted images and icons
+    └──passion-photos/     # Photos for the "My Passions" section
 ├──src/                    # Source files
+    ├──functions/          # JavaScript function files
     ├──pages/              # Full page React components
     ├──partials/           # Smaller React components
-└──test/                   # Test files
+    ├──style/              # Style sheets are here
+    └──main.jsx
+├──eslint.config.js
+├──index.html
+├──LICENSE
+├──package-lock.json
+├──package.json
+├──README.md
+└──vite.config.js
 ```
 
 [^1]: Where the README.md file is located
