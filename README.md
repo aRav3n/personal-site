@@ -114,6 +114,7 @@ Here's a brief description of how to use the app.
     ├──partials/           # Smaller React components
     ├──style/              # Style sheets are here
     └──main.jsx
+├──.gitignore              # Files and folders that are local only
 ├──eslint.config.js
 ├──index.html
 ├──LICENSE
