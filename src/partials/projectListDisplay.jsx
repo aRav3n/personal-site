@@ -1,12 +1,12 @@
-import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { Globe } from "lucide-react";
 
 import "../style/projects.css";
 
 function SingleProjectDisplay({ project }) {
   return (
     <div>
-      <strong>{project.name}</strong>
+      <h2>{project.name}</h2>
       <p>{project.description}</p>
       <div className="links">
         <a
@@ -14,6 +14,7 @@ function SingleProjectDisplay({ project }) {
           target="_blank"
           rel="noopener noreferrer"
         >
+          <Globe />
           Website
         </a>
         {project.repoIfPublicElseNull ? (
@@ -34,11 +35,9 @@ function SingleProjectDisplay({ project }) {
 export default function ProjectsDisplay({ projects, className }) {
   return (
     <div className={`projects ${className}`}>
-      <span></span>
       {projects.map((project) => {
         return <SingleProjectDisplay project={project} key={uuidv4()} />;
       })}
-      <span></span>
     </div>
   );
 }

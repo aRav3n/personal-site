@@ -26,18 +26,19 @@ This is my personal website that I crafted for displaying my portfolio. All my w
      npm install @types/react-dom @vitejs/plugin-react
      npm install eslint eslint-config-prettier --save-dev
      npm install eslint-plugin-react-hooks eslint-plugin-react-refresh --save-dev
-     npm install globals vite --save-dev
+     npm install globals vite vite-plugin-compression2 --save-dev
      ```
-4. Log in to your [EmailJS dashboard](https://dashboard.emailjs.com) or sign up for the service.
+4. Set up the Vite Compression plugin per the [instructions](github.com/nonzzz/vite-plugin-compression?tab=readme-ov-file#basic-usage)
+5. Log in to your [EmailJS dashboard](https://dashboard.emailjs.com) or sign up for the service.
    - Follow their [tutorial](https://www.emailjs.com/docs/tutorial/overview/) if needed
-5. Back in your IDE: `code .env`
+6. Back in your IDE: `code .env`
    - ```bash
      VITE_EMAIL_JS_SERVICE_ID="your email service ID"
      VITE_EMAIL_JS_PUBLIC_KEY="your public key"
      ```
-6. `npm run dev`
+7. `npm run dev`
    - `^` + `c` will end the process
-7. Navigate to the url displayed in the terminal: `➜  Local:   http://localhost:5173/`
+8. Navigate to the url displayed in the terminal: `➜  Local:   http://localhost:5173/`
 
 ## Usage and Screenshots
 
@@ -94,6 +95,7 @@ Using this site is pretty straightforward. Users are able to navigate to differe
 - [eslint-plugin-react-refresh](https://www.npmjs.com/package/eslint-plugin-react-refresh)
 - [globals](https://www.npmjs.com/package/globals)
 - [vite](https://www.npmjs.com/package/vite)
+- [vite-plugin-compression2](https://www.npmjs.com/package/vite-plugin-compression2)
 - [uuid](https://www.npmjs.com/package/uuid)
 
 ### Other Credits

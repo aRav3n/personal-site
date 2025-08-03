@@ -8,9 +8,13 @@ import getProjects from "../functions/projectsList";
 export default function RootElement() {
   const [pinnedProjects, setPinnedProjects] = useState([]);
   const [otherProjects, setOtherProjects] = useState([]);
+  const [wakeUpBackends, setWakeUpBackends] = useState(true);
 
   useEffect(() => {
-    const { pinnedProjectsArray, otherProjectsArray } = getProjects();
+    const { pinnedProjectsArray, otherProjectsArray } = getProjects(
+      wakeUpBackends,
+      setWakeUpBackends
+    );
 
     setPinnedProjects(pinnedProjectsArray);
     setOtherProjects(otherProjectsArray);

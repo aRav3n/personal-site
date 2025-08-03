@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  --attention-color: #646cff;
+  --attention-color: #4439df;
   --item-background: #d1dbc4;
   --light-background: #f6fbef;
   --light-background-semi-transparent: #f6fbefaa;
@@ -77,6 +77,11 @@ div.links a {
   color: var(--text-color);
 }
 
+div.projects + button {
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+}
+
 div.passion > button {
   background-color: #00000000;
   border: 2px solid var(--light-outline);
@@ -85,13 +90,14 @@ div.passion > button {
 div.projects > div {
   border: 2px solid var(--light-outline);
 }
-div.projects > div:focus,
-div.projects > div:focus-visible,
-div.projects > div:hover {
-  border-color: var(--attention-color);
+div.projects > div > h2 {
+  margin: 0;
 }
 div.projects > div > img {
   border-radius: 0.5rem;
+}
+div.projects > div > p {
+  text-align: justify;
 }
 
 footer {
@@ -151,6 +157,25 @@ header > div.header-links > div:last-child {
   display: grid;
   gap: 0.5rem;
 }
+header > div.header-links > div {
+  padding: 0.25rem 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+header > div.header-links a {
+  padding: 0;
+}
+header > div.header-links div.background {
+  background-color: var(--medium-background);
+  border-radius: 0.25rem;
+  height: 100%;
+  opacity: 75%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
 
 .header-extension {
   background-color: var(--medium-background);
@@ -182,6 +207,9 @@ main {
 main > * {
   box-sizing: border-box;
   padding: 0 2vw;
+}
+main a {
+  text-decoration: underline;
 }
 main > p {
   margin: 0;

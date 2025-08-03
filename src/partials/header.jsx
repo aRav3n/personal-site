@@ -17,17 +17,34 @@ export default function HeaderComponent() {
             <Link to="/about">About</Link>
             <Link to="/projects">Projects</Link>
             <Link to="/contact">Contact</Link>
+            <div className="background"></div>
           </div>
           <div>
-            <Link to="https://github.com/aRav3n">
+            <a
+              href="https://github.com/aRav3n"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="my GitHub"
+            >
               <ion-icon name="logo-github"></ion-icon>
-            </Link>
-            <Link to="https://www.linkedin.com/in/andrew-ryan-/">
+            </a>
+            <a
+              href="https://www.linkedin.com/in/andrew-ryan-/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="my LinkedIn"
+            >
               <ion-icon name="logo-linkedin"></ion-icon>
-            </Link>
-            <Link to="https://www.instagram.com/4funnervibes/">
+            </a>
+            <a
+              href="https://www.instagram.com/4funnervibes/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="my Instagram"
+            >
               <ion-icon name="logo-instagram"></ion-icon>
-            </Link>
+            </a>
+            <div className="background"></div>
           </div>
         </div>
       </header>

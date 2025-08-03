@@ -15,10 +15,10 @@ export default function IndexPage() {
         <p>
           I'm a self-motivated full stack developer with experience in the PERN
           stack (PostgreSQL + PrismaORM, ExpressJS, React, Node.js). I thrive in
-          flexible work environments and am seeking a fully remote developer
-          position to apply my skills and continue learning. I'm adaptable,
-          self-driven, and eager to expand my skill set with new technologies
-          and stacks.
+          flexible work environments and am interested in applying my skills
+          while continuing to learn even more about the world of web
+          development. I'm adaptable, self-driven, and eager to expand my skill
+          set with new technologies and stacks.
         </p>
       </div>
       <h1>Some of my past projects</h1>
