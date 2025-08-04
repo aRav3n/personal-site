@@ -195,7 +195,7 @@ function PassionsList({ expandedSection, setExpandedSection }) {
   return (
     <div className="passion-list">
       <div>
-        <h1>My Passions</h1>
+        <h2>My Passions</h2>
         <p>(click to see more)</p>
       </div>
       <div>

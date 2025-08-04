@@ -11,10 +11,7 @@ export default function RootElement() {
   const [wakeUpBackends, setWakeUpBackends] = useState(true);
 
   useEffect(() => {
-    const { pinnedProjectsArray, otherProjectsArray } = getProjects(
-      wakeUpBackends,
-      setWakeUpBackends
-    );
+    const { pinnedProjectsArray, otherProjectsArray } = getProjects();
 
     setPinnedProjects(pinnedProjectsArray);
     setOtherProjects(otherProjectsArray);

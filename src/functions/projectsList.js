@@ -10,8 +10,7 @@ function createProject(
   screenshotPath,
   description,
   livePreviewUrl,
-  repoIfPublicElseNull,
-  hasBackendToAwaken
+  repoIfPublicElseNull
 ) {
   if (stopAddingToArrays) {
     return;
@@ -22,14 +21,6 @@ function createProject(
   ) {
     stopAddingToArrays = true;
     return;
-  }
-
-  if (hasBackendToAwaken) {
-    (async () => {
-      try {
-        await fetch(livePreviewUrl);
-      } catch (error) {}
-    })();
   }
 
   const projectObject = {
@@ -47,7 +38,7 @@ function createProject(
   }
 }
 
-export default function getProjects(wakeUpBackends, setWakeUpBackends) {
+export default function getProjects() {
   createProject(
     "Spa Homepage",
     "https://github.com/aRav3n/punto-de-calma-homepage/raw/main/src/images/screenshot.png",
@@ -69,8 +60,7 @@ export default function getProjects(wakeUpBackends, setWakeUpBackends) {
     "https://github.com/aRav3n/odin-book-backend/raw/main/public/screenshot.png",
     "This is a social media website project that I built as part of The Odin Project curriculum. The frontend is build using React and Vite and can be used with an account or anonymously as a guest. The backend is a RESTful API that can be used per the endpoint instructions in the repo.",
     "https://odin-book-frontend-8xo.pages.dev/",
-    "https://github.com/aRav3n/odin-book-backend",
-    wakeUpBackends
+    "https://github.com/aRav3n/odin-book-backend"
   );
 
   createProject(
@@ -78,8 +68,7 @@ export default function getProjects(wakeUpBackends, setWakeUpBackends) {
     "https://github.com/aRav3n/inventory-app/raw/main/public/screenshot.png",
     "I created this app as part of the curriculum for The Odin Project. Originally I was planning to do a store inventory but thought that this packing list would be more useful for me in the future.",
     "https://packing-list-67q7.onrender.com/",
-    "https://github.com/aRav3n/inventory-app",
-    wakeUpBackends
+    "https://github.com/aRav3n/inventory-app"
   );
 
   createProject(
@@ -95,8 +84,7 @@ export default function getProjects(wakeUpBackends, setWakeUpBackends) {
     "https://github.com/aRav3n/wheres-waldo-backend/raw/main/public/screenshot.png",
     "This is a hidden image game (similar to Where's Waldo) built as part of The Odin Project curriculum. The frontend is built using React and Vite; it allows users to click anywhere on the game image and sends the coordinates to the API for checking. The backend is a RESTful API built with Node.js and Express.",
     "https://98256945.wheres-waldo-frontend-top.pages.dev/",
-    "https://github.com/aRav3n/wheres-waldo-backend",
-    wakeUpBackends
+    "https://github.com/aRav3n/wheres-waldo-backend"
   );
 
   createProject(
@@ -112,10 +100,8 @@ export default function getProjects(wakeUpBackends, setWakeUpBackends) {
     "https://github.com/aRav3n/mini-message-board/raw/main/public/screenshot.png",
     "This is a mini message board app built using Node.js, Express, and EJS. It auto-populates a few messages at startup to demonstrate how it works.",
     "https://mini-message-board-arav3n.onrender.com/",
-    "https://github.com/aRav3n/mini-message-board",
-    wakeUpBackends
+    "https://github.com/aRav3n/mini-message-board"
   );
 
-  setWakeUpBackends(false);
   return { pinnedProjectsArray, otherProjectsArray };
 }
