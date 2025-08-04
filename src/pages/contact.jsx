@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Coins, Mail, MessageSquareX, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
@@ -201,6 +201,8 @@ export default function ContactPage() {
   const emailServiceId = import.meta.env.VITE_EMAIL_JS_SERVICE_ID;
   const publicKey = import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY;
 
+  const navigate = useNavigate();
+
   function clearStates() {
     setCompany("");
     setEmail("");
@@ -273,6 +275,7 @@ export default function ContactPage() {
     sendEmail(title, name, messageToSend, email);
 
     clearStates();
+    navigate("/");
   }
 
   return (
