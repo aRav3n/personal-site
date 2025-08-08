@@ -20,13 +20,7 @@ This is my personal website that I crafted for displaying my portfolio. All my w
 3. Run the following in your terminal [^2]
    - ```bash
      npm init -y
-     npm install react react-dom react-router-dom
-     npm install lucide-react uuid
-     npm install @eslint/js @types/react --save-dev
-     npm install @types/react-dom @vitejs/plugin-react
-     npm install eslint eslint-config-prettier --save-dev
-     npm install eslint-plugin-react-hooks eslint-plugin-react-refresh --save-dev
-     npm install globals vite vite-plugin-compression2 --save-dev
+     npm install
      ```
 4. Set up the Vite Compression plugin per the [instructions](github.com/nonzzz/vite-plugin-compression?tab=readme-ov-file#basic-usage)
 5. Log in to your [EmailJS dashboard](https://dashboard.emailjs.com) or sign up for the service.
