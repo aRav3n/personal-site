@@ -8,6 +8,7 @@
 - [Technologies Used](#technologies-used)
 - [Dependencies and Credits](#dependencies-and-credits)
 - [Project Structure](#project-structure)
+- [Future Improvement Ideas](#future-improvement-ideas)
 
 ## Description
 
@@ -117,6 +118,12 @@ Using this site is pretty straightforward. Users are able to navigate to differe
 ├──README.md
 └──vite.config.js
 ```
+
+## Future Improvement Ideas
+
+- Add page for work experience
+- Add section or page for technologies
+- Add page for open source contributions
 
 [^1]: Where the README.md file is located
 [^2]: You are free to install all the dev dependencies on a single line instead of breaking them up like this. I've found that breaking them up is more reliable with slower internet connections.
