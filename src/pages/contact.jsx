@@ -281,6 +281,10 @@ export default function ContactPage() {
   return (
     <main>
       <h1>Contact Me</h1>
+      <h3>
+        Check out my resume{" "}
+        <a href="https://flowcv.com/resume/28m7qdtl86tw">here</a>!
+      </h3>
       <p className="contact-about">
         Hey there! If you think we'd be a good fit and would like to work
         together, or just have questions and comments, send me a message!

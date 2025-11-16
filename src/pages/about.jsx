@@ -245,6 +245,10 @@ export default function AboutPage() {
   return (
     <>
       <h1>About Me</h1>
+      <h3>
+        Check out my resume{" "}
+        <a href="https://flowcv.com/resume/28m7qdtl86tw">here</a>!
+      </h3>
       <p>
         Hi there, I'm Andy! In 2022 I left my ten year career as a manufacturing
         engineer to drive the Pan American Highway with my wife (check out our{" "}
