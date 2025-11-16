@@ -8,6 +8,7 @@
 - [Technologies Used](#technologies-used)
 - [Dependencies and Credits](#dependencies-and-credits)
 - [Project Structure](#project-structure)
+- [Future Improvement Ideas](#future-improvement-ideas)
 
 ## Description
 
@@ -20,13 +21,7 @@ This is my personal website that I crafted for displaying my portfolio. All my w
 3. Run the following in your terminal [^2]
    - ```bash
      npm init -y
-     npm install react react-dom react-router-dom
-     npm install lucide-react uuid
-     npm install @eslint/js @types/react --save-dev
-     npm install @types/react-dom @vitejs/plugin-react
-     npm install eslint eslint-config-prettier --save-dev
-     npm install eslint-plugin-react-hooks eslint-plugin-react-refresh --save-dev
-     npm install globals vite vite-plugin-compression2 --save-dev
+     npm install
      ```
 4. Set up the Vite Compression plugin per the [instructions](github.com/nonzzz/vite-plugin-compression?tab=readme-ov-file#basic-usage)
 5. Log in to your [EmailJS dashboard](https://dashboard.emailjs.com) or sign up for the service.
@@ -123,6 +118,12 @@ Using this site is pretty straightforward. Users are able to navigate to differe
 ├──README.md
 └──vite.config.js
 ```
+
+## Future Improvement Ideas
+
+- Add page for work experience
+- Add section or page for technologies
+- Add page for open source contributions
 
 [^1]: Where the README.md file is located
 [^2]: You are free to install all the dev dependencies on a single line instead of breaking them up like this. I've found that breaking them up is more reliable with slower internet connections.
