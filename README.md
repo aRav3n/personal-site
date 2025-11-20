@@ -29,6 +29,8 @@ Using this site is pretty straightforward. Users are able to navigate to differe
 
 ## Installation Instructions
 
+**To add new portfolio projects, code src/functions/projectsList.js**
+
 1. Clone or fork this repo
 2. cd into the project root directory [^1]
 3. Run the following in your terminal [^2]
@@ -100,16 +102,17 @@ Using this site is pretty straightforward. Users are able to navigate to differe
 ## Project Structure
 
 ```bash
-├──node_modules/           # NPM package files - populated locally only
-├──public/                 # Locally hosted images and icons
-    └──passion-photos/     # Photos for the "My Passions" section
-├──src/                    # Source files
-    ├──functions/          # JavaScript function files
-    ├──pages/              # Full page React components
-    ├──partials/           # Smaller React components
-    ├──style/              # Style sheets are here
+├──node_modules/             # NPM package files - populated locally only
+├──public/                   # Locally hosted images and icons
+    └──passion-photos/       # Photos for the "My Passions" section
+├──src/                      # Source files
+    ├──functions/            # JavaScript function files
+       └──projectsList.js    # This is where new portfolio projects can be added
+    ├──pages/                # Full page React components
+    ├──partials/             # Smaller React components
+    ├──style/                # Style sheets are here
     └──main.jsx
-├──.gitignore              # Files and folders that are local only
+├──.gitignore                # Files and folders that are local only
 ├──eslint.config.js
 ├──index.html
 ├──LICENSE
