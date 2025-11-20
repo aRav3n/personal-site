@@ -14,6 +14,19 @@
 
 This is my personal website that I crafted for displaying my portfolio. All my web development learning up to this point has been via [The Odin Project](https://www.theodinproject.com) and I am very grateful. This site will showcase my projects to show potential clients and employers what my capabilities are.
 
+## Usage and Screenshots
+
+<img src="./public/screenshot.png" alt="screenshot" style="height: 50vh; width: auto;">
+
+Using this site is pretty straightforward. Users are able to navigate to different pages by clicking on the links in the header and can send a message or quote request on the Contact page.
+
+- [Link to live preview](https://groundedwanderer.dev/)
+
+### Features
+
+- Display my portfolio
+- Sticks to my core design principles of: Simple, Functional, Beautiful
+
 ## Installation Instructions
 
 1. Clone or fork this repo
@@ -34,19 +47,6 @@ This is my personal website that I crafted for displaying my portfolio. All my w
 7. `npm run dev`
    - `^` + `c` will end the process
 8. Navigate to the url displayed in the terminal: `➜  Local:   http://localhost:5173/`
-
-## Usage and Screenshots
-
-<img src="./public/screenshot.png" alt="screenshot" style="height: 50vh; width: auto;">
-
-Using this site is pretty straightforward. Users are able to navigate to different pages by clicking on the links in the header and can send a message or quote request on the Contact page.
-
-- [Link to live preview](https://groundedwanderer.dev/)
-
-### Features
-
-- Display my portfolio
-- Sticks to my core design principles of: Simple, Functional, Beautiful
 
 ## Technologies Used
 
