@@ -56,6 +56,14 @@ export default function getProjects() {
   );
 
   createProject(
+    "Gin Rummy Score Tracker App",
+    "https://raw.githubusercontent.com/aRav3n/gin-rummy-app/refs/heads/main/assets/images/screenshots/Android/tablet_10/gameplay.png",
+    "I built this score tracker in React Native. It was built to fulfill my need to track game scores on something other than a napkin. I initially built it as a web app but have since converted it to an app by using React Native.",
+    "",
+    "https://github.com/aRav3n/gin-rummy-app"
+  );
+
+  createProject(
     "Social Media Site",
     "https://github.com/aRav3n/odin-book-backend/raw/main/public/screenshot.png",
     "This is a social media website project that I built as part of The Odin Project curriculum. The frontend is build using React and Vite and can be used with an account or anonymously as a guest. The backend is a RESTful API that can be used per the endpoint instructions in the repo.",
@@ -85,14 +93,6 @@ export default function getProjects() {
     "This is a hidden image game (similar to Where's Waldo) built as part of The Odin Project curriculum. The frontend is built using React and Vite; it allows users to click anywhere on the game image and sends the coordinates to the API for checking. The backend is a RESTful API built with Node.js and Express.",
     "https://98256945.wheres-waldo-frontend-top.pages.dev/",
     "https://github.com/aRav3n/wheres-waldo-backend"
-  );
-
-  createProject(
-    "Gin Rummy Card Game Score Tracker",
-    "https://github.com/aRav3n/gin-rummy-score-tracker/raw/main/public/start_screenshot.png",
-    "This score tracker was built to fulfill my need to track game scores on something other than a napkin.",
-    "https://gin-rummy-score-tracker.pages.dev/",
-    "https://github.com/aRav3n/gin-rummy-score-tracker"
   );
 
   createProject(

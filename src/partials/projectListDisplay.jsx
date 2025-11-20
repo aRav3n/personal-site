@@ -9,14 +9,16 @@ function SingleProjectDisplay({ project }) {
       <h2>{project.name}</h2>
       <p>{project.description}</p>
       <div className="links">
-        <a
-          href={project.livePreviewUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Globe />
-          Website
-        </a>
+        {project.livePreviewUrl !== "" ? (
+          <a
+            href={project.livePreviewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Globe />
+            Website
+          </a>
+        ) : null}
         {project.repoIfPublicElseNull ? (
           <a
             href={project.repoIfPublicElseNull}
