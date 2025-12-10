@@ -43,7 +43,7 @@ export default function getProjects() {
     "Spa Homepage",
     "https://github.com/aRav3n/punto-de-calma-homepage/raw/main/src/images/screenshot.png",
     "This is a simple Single Page App (SPA) that I built for a spa in Mexico City. It is built using Webpack and features the color palate used on their main price list image.",
-    "https://groundedwanderer.dev/punto-de-calma-homepage/",
+    "https://arav3n.github.io/punto-de-calma-homepage/",
     "https://github.com/aRav3n/punto-de-calma-homepage"
   );
 
