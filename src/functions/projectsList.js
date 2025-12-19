@@ -58,8 +58,8 @@ export default function getProjects() {
   createProject(
     "Gin Rummy Score Tracker App",
     "https://raw.githubusercontent.com/aRav3n/gin-rummy-app/refs/heads/main/assets/images/screenshots/Android/tablet_10/gameplay.png",
-    "I built this score tracker in React Native. It was built to fulfill my need to track game scores on something other than a napkin. I initially built it as a web app but have since converted it to an app by using React Native.",
-    "",
+    "I built this score tracker in React Native with Expo. It was built to fulfill my need to track game scores on something other than a napkin. I initially built it as a web app but have since converted it to an app by using React Native.",
+    "https://gin-rummy-score-tracker.expo.app/",
     "https://github.com/aRav3n/gin-rummy-app"
   );
 
