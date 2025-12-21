@@ -98,6 +98,7 @@ Using this site is pretty straightforward. Users are able to navigate to differe
 - [Devicion](https://devicon.dev/)
 - [Skillicons](https://skillicons.dev/)
 - [Ionicons](https://ionic.io/ionicons)
+- [EmailJS](https://dashboard.emailjs.com)
 
 ## Project Structure
 
