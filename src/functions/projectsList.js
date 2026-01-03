@@ -65,7 +65,7 @@ export default function getProjects() {
 
   createProject(
     "Social Media Site",
-    "https://github.com/aRav3n/odin-book-backend/raw/main/public/screenshot.png",
+    "https://raw.githubusercontent.com/aRav3n/odin-book-frontend/refs/heads/main/public/screenshot.png",
     "This is a social media website project that I built as part of The Odin Project curriculum. The frontend is build using React and Vite and can be used with an account or anonymously as a guest. The backend is a RESTful API that can be used per the endpoint instructions in the repo.",
     "https://odin-book-frontend-8xo.pages.dev/",
     "https://github.com/aRav3n/odin-book-backend"
